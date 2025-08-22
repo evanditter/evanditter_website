@@ -1,0 +1,11 @@
+*venv*
+node_modules/
+.DS_Store*
+.env
+db.sql*
+*.pyc
+__pycache__/
+*.log
+*.local
+.vscode/
+Dist/

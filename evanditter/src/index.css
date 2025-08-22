@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* @theme {
+  --color-brand: #b4d455;
+} */
+
+@layer components {
+  .max-container {
+    width:100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
