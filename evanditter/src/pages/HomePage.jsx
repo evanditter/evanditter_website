@@ -53,13 +53,13 @@ const HomePage = () => {
       <div className="py-16">
         <div className="grid md:grid-cols-2 gap-3 items-center">
           {/* Left Side - Navigation Links */}
-          <div className="space-y-10" onMouseLeave={handleMouseLeave}>
-            <div className="space-y-8">
+          <div className="space-y-12" onMouseLeave={handleMouseLeave}>
+            <div className="space-y-12">
               {navigationSections.map((section) => (
                 <Link
                   key={section.id}
                   to={section.path}
-                  className={`block text-5xl font-bold transition-all duration-300 hover:scale-105 ${
+                  className={`block text-6xl md:text-7xl font-bold transition-all duration-300 hover:scale-105 ${
                     hoveredSection === section.id
                       ? 'bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent transform translate-x-4'
                       : 'text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 hover:bg-clip-text hover:text-transparent'

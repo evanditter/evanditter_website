@@ -14,8 +14,8 @@ export const projects = [
     live_demo_url: "https://evanditter.com",
     project_icon: "/src/images/evanditter_icon.png",
     project_brand: "Evan Ditter",
-    created_at: "2025-08-21T01:42:26.781101+00:00",
-    updated_at: "2025-08-21T01:42:26.781228+00:00"
+    created_at: "2025-07-20T01:42:26.781101+00:00",
+    updated_at: "2025-08-22T01:42:26.781228+00:00"
   },
   {
     id: 2,
@@ -33,8 +33,8 @@ export const projects = [
       left: "/src/images/stocks_icon.png",
       right: "/src/images/weather_icon.png"
     },
-    created_at: "2025-08-21T01:42:26.782056+00:00",
-    updated_at: "2025-08-21T01:42:26.782065+00:00"
+    created_at: "2020-06-01T01:42:26.782056+00:00",
+    updated_at: "2021-05-01T01:42:26.782065+00:00"
   },
   {
     id: 3,
@@ -52,8 +52,8 @@ export const projects = [
       left: "/src/images/nba_logo.png",
       right: "/src/images/databricks_logo.png"
     },
-    created_at: "2025-08-21T01:42:26.782738+00:00",
-    updated_at: "2025-08-21T01:42:26.782744+00:00"
+    created_at: "2023-03-10T01:42:26.782738+00:00",
+    updated_at: "2024-10-15T01:42:26.782744+00:00"
   },
   {
     id: 4,
@@ -68,8 +68,8 @@ export const projects = [
     github_url: "https://github.com/evanditter/OpenX",
     live_demo_url: null,
     project_logo: "/src/images/logo_openx.png",
-    created_at: "2025-08-21T02:24:44.633489+00:00",
-    updated_at: "2025-08-21T02:24:44.633621+00:00"
+    created_at: "2020-02-15T02:24:44.633489+00:00",
+    updated_at: "2020-06-15T02:24:44.633621+00:00"
   },
   {
     id: 5,
@@ -84,7 +84,7 @@ export const projects = [
     github_url: "https://github.com/evanditter/Python-Projects",
     live_demo_url: null,
     project_logo: "/src/images/python_logo.png",
-    created_at: "2025-08-21T02:24:44.633489+00:00",
+    created_at: "2019-08-21T02:24:44.633489+00:00",
     updated_at: "2025-08-21T02:24:44.633621+00:00"
   },
   {
@@ -100,8 +100,8 @@ export const projects = [
     github_url: "https://github.com/evanditter/TwitterPredictor",
     live_demo_url: null,
     project_icon_fa: "FaTwitter",
-    created_at: "2025-08-21T02:24:44.633489+00:00",
-    updated_at: "2025-08-21T02:24:44.633621+00:00"
+    created_at: "2020-02-21T02:24:44.633489+00:00",
+    updated_at: "2020-06-19T02:24:44.633621+00:00"
   }
 ];
 

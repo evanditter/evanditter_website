@@ -11,8 +11,6 @@ export const personalInfo = {
   twitter_url: 'https://x.com/evan_ditter',
   instagram_url: 'https://www.instagram.com/evan_ditter/',
   youtube_url: 'https://www.youtube.com/@Evan_Ditter',
-  // Note: resume_file and profile_image paths can be added here if needed
-  // resume_file: '/assets/Evan_Ditter_Resume.pdf',
   // profile_image: '/assets/evan_professional_headshot.jpeg'
 };
 

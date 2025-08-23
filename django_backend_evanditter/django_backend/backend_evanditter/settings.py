@@ -30,7 +30,10 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'evanditter.com',
+    'www.evanditter.com',
+]
 
 
 # Application definition
@@ -139,14 +142,18 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 6,
     'DEFAULT_AUTHENTICATION_CLASSES': [],
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',
+        'rest_framework.permissions.IsAuthenticated',
     ],
 }
 
 
-CORS_ALLOWED_ORIGINS = [
+
+# Dynamically set CORS and CSRF origins based on DEBUG
+PRODUCTION_ORIGINS = [
     "https://evanditter.com",
     "https://www.evanditter.com",
+]
+LOCALHOST_ORIGINS = [
     "http://localhost:5173",
     "http://localhost:5174",
     "http://localhost:5175",
@@ -154,15 +161,12 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
 ]
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://evanditter.com",
-    "https://www.evanditter.com",
-    "http://localhost:5173",
-    "http://localhost:5174",
-    "http://localhost:5175",
-    "http://localhost:5176",
-    "http://localhost:3000",
-]
+if DEBUG:
+    CORS_ALLOWED_ORIGINS = PRODUCTION_ORIGINS + LOCALHOST_ORIGINS
+    CSRF_TRUSTED_ORIGINS = PRODUCTION_ORIGINS + LOCALHOST_ORIGINS
+else:
+    CORS_ALLOWED_ORIGINS = PRODUCTION_ORIGINS
+    CSRF_TRUSTED_ORIGINS = PRODUCTION_ORIGINS
 
 # Email settings
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # For development

@@ -5,10 +5,11 @@ function CoursesPage() {
   return (
     <div className="min-h-screen">
       {/* Header Section */}
-      <div className="min-h-[50vh] flex flex-col md:flex-row">
+      <div className="max-container px-4 mx-auto">
+        <div className="min-h-[50vh] flex flex-col md:flex-row">
         {/* Left Side - Header Content */}
-        <div className="w-full md:w-1/2 flex items-center justify-center pt-8 md:pt-0 pb-1 md:pb-0 min-h-[25vh] md:min-h-[50vh]">
-          <div className="text-center px-12 py-8">
+        <div className="w-full md:w-1/2 flex items-start justify-center pt-16 md:pt-24 pb-1 md:pb-0 min-h-[25vh] md:min-h-[50vh]">
+          <div className="max-w-lg mx-auto text-center">
             {/* Circular Icon */}
             <div className="flex justify-center mb-6">
               <div className="relative inline-flex items-center justify-center">
@@ -36,7 +37,7 @@ function CoursesPage() {
           <img
             src="/src/images/courses_home_page.png"
             alt="Courses"
-            className="max-w-full max-h-full object-contain"
+            className="max-w-full max-h-full object-contain rounded-lg"
           />
         </div>
       </div>
@@ -102,6 +103,7 @@ function CoursesPage() {
         </div>
       </div>
     </div>
+  </div>
   );
 }
 

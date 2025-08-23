@@ -8,6 +8,7 @@ import CourseDetailPage from "./pages/CourseDetailPage";
 import TutoringPage from "./pages/TutoringPage";
 import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import ResumePage from "./pages/ResumePage";
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
           />
           <Route path="tutoring" element={<TutoringPage />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="resume" element={<ResumePage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

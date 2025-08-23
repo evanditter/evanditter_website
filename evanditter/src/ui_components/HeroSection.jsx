@@ -10,6 +10,7 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaPhone,
+  FaRegFileAlt,
 } from "react-icons/fa";
 
 const HeroSection = () => {
@@ -25,6 +26,7 @@ const HeroSection = () => {
               className="w-full h-full object-cover"
             />
           </div>
+          <div className="mt-10"></div>
         </div>
 
         {/* Content */}
@@ -32,7 +34,9 @@ const HeroSection = () => {
           <h1 className="text-4xl lg:text-5xl font-bold text-[#181A2A] dark:text-white mb-2">
             {personalInfo.name}
           </h1>
-          <h2 className="text-xl lg:text-2xl text-blue-600 dark:text-blue-400 mb-6">
+          <h2
+            className="text-xl lg:text-2xl bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent font-semibold mb-6"
+          >
             {personalInfo.title}
           </h2>
 
@@ -67,7 +71,22 @@ const HeroSection = () => {
             {personalInfo.location && (
               <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
                 <FaMapMarkerAlt className="text-blue-600 dark:text-blue-400" />
-                <span>{personalInfo.location}</span>
+                <a
+                  href="https://www.google.com/maps/place/Manhattan,+New+York,+NY/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                >
+                  {personalInfo.location}
+                </a>
+                <span className="mx-1">|</span>
+                <a
+                  href="/resume"
+                  className="flex items-center gap-1 text-gray-600 dark:text-gray-300 hover:underline hover:text-blue-800 dark:hover:text-blue-200 transition-colors group"
+                >
+                  <FaRegFileAlt className="text-blue-600 dark:text-blue-400 transition-colors group-hover:text-blue-500" />
+                  <span className="transition-colors group-hover:text-blue-500">Resume</span>
+                </a>
               </div>
             )}
           </div>

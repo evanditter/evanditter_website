@@ -21,8 +21,9 @@ class CourseListPagination(PageNumberPagination):
     page_size = 9
 
 
-# Course Views
+ # Course Views
 @api_view(["GET"])
+@permission_classes([AllowAny])
 def course_list(request):
     """Get all published courses with pagination"""
     courses = Course.objects.filter(status="Published")
@@ -33,6 +34,7 @@ def course_list(request):
 
 
 @api_view(['GET'])
+@permission_classes([AllowAny])
 def get_course(request, slug):
     """Get a specific course by slug with all lessons"""
     course = get_object_or_404(Course, slug=slug, status="Published")
@@ -41,6 +43,7 @@ def get_course(request, slug):
 
 
 @api_view(['GET'])
+@permission_classes([AllowAny])
 def featured_courses(request):
     """Get featured courses only"""
     courses = Course.objects.filter(is_featured=True, status="Published")
@@ -49,6 +52,7 @@ def featured_courses(request):
 
 
 @api_view(['GET'])
+@permission_classes([AllowAny])
 def courses_by_difficulty(request, difficulty):
     """Get courses filtered by difficulty"""
     courses = Course.objects.filter(difficulty=difficulty, status="Published")
@@ -57,6 +61,7 @@ def courses_by_difficulty(request, difficulty):
 
 
 @api_view(['GET'])
+@permission_classes([AllowAny])
 def free_courses(request):
     """Get all free courses"""
     courses = Course.objects.filter(price=0, status="Published")
@@ -65,6 +70,7 @@ def free_courses(request):
 
 
 @api_view(['GET'])
+@permission_classes([AllowAny])
 def get_lesson(request, course_slug, lesson_slug):
     """Get a specific lesson from a course"""
     course = get_object_or_404(Course, slug=course_slug, status="Published")
@@ -76,8 +82,8 @@ def get_lesson(request, course_slug, lesson_slug):
     return Response(serializer.data)
 
 
-@csrf_exempt
 @require_http_methods(["POST"])
+@permission_classes([AllowAny])
 def contact_form(request):
     """Handle contact form submissions"""
     try:
