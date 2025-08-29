@@ -21,6 +21,7 @@ load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # Example: a 'staticfiles' folder at the project root
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -85,13 +86,22 @@ WSGI_APPLICATION = 'backend_evanditter.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'evanditter_db',  # Your database name
+            'USER': os.getenv('DATABASE_USER'),      # Your database username
+            'PASSWORD': os.getenv('DATABASE_PASSWORD'), # Your database password
+            'HOST': 'localhost',   # Or your database host/IP
+            'PORT': '5432',        # Default PostgreSQL port
+        }
     }
-}
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
