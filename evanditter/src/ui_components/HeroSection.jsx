@@ -21,7 +21,7 @@ const HeroSection = () => {
         <div className="flex-shrink-0">
           <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-lg">
             <img
-              src={evanHeadshot}
+              src="/images/evan_professional_headshot.jpeg"
               alt={personalInfo.name}
               className="w-full h-full object-cover"
             />
