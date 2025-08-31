@@ -95,7 +95,7 @@ WSGI_APPLICATION = 'backend_evanditter.wsgi.application'
 DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'evanditter_db',  # Your database name
+            'NAME': os.getenv('DATABASE_NAME'),  # Your database name
             'USER': os.getenv('DATABASE_USER'),      # Your database username
             'PASSWORD': os.getenv('DATABASE_PASSWORD'), # Your database password
             'HOST': 'localhost',   # Or your database host/IP

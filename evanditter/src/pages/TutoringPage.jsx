@@ -115,7 +115,7 @@ const TutoringPage = () => {
           {/* Right Side - Image */}
           <div className="w-full md:w-1/2 relative overflow-hidden min-h-[25vh] md:min-h-[50vh] aspect-[16/9]">
             <img
-              src="/src/images/evan_professional_headshot.jpeg"
+              src="/images/evan_professional_headshot.jpeg"
               alt="Evan Ditter Professional Headshot"
               className="w-full h-full object-cover object-top rounded-lg"
             />

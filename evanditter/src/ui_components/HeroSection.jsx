@@ -1,4 +1,4 @@
-import evanHeadshot from "@/images/evan_professional_headshot.jpeg";
+// import evanHeadshot from "@/images/evan_professional_headshot.jpeg"; // No longer needed, use public path
 import { personalInfo } from "@/data/personalInfo";
 import {
   FaLinkedin,

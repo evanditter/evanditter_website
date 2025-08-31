@@ -2,7 +2,7 @@ import { FaSun, FaMoon, FaBars } from "react-icons/fa";
 import ResponsiveNavBar from "./ResponsiveNavBar";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import evanditterIcon from "../images/evanditter_icon.png";
+// import evanditterIcon from "../images/evanditter_icon.png"; // No longer needed, use public path
 
 const NavBar = ({ darkMode, handleDarkMode }) => {
   const [showNavBar, setShowNavBar] = useState(false);

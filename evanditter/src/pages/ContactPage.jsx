@@ -34,7 +34,7 @@ const ContactPage = () => {
         {/* Right Side - Image */}
         <div className="w-full md:w-1/2 relative overflow-hidden min-h-[25vh] md:min-h-[50vh] aspect-[16/9]">
           <img
-            src="/src/images/contact_me.png"
+            src="/images/contact_me.png"
             alt="Contact Me"
             className="w-full h-full object-cover object-top rounded-lg"
           />
